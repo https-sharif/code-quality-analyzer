@@ -27,6 +27,13 @@ The project uses K-Means clustering for code quality grouping. DBSCAN was tried 
 
 Supervised models, including Random Forest, were tested using fake labels made from clustering. Because of overfitting on fake labels, the workflow centers mainly on unsupervised clustering.
 
+## Streamlit App
+
+You can run a web app for code quality prediction using Streamlit:
+
+- Install requirements: `pip install -r requirements.txt`
+- Run: `streamlit run app.py`
+
 ## Usage
 
 To use the project:
@@ -34,4 +41,5 @@ To use the project:
 - Install needed packages: `pip install -r requirements.txt`.
 - Run the scripts in order: `python fetch.py`, `python extract.py`, `python export.py`.
 - For machine learning analysis: Open `code_quality.ipynb` to perform preprocessing, PCA, K-Means clustering, and visualization.
+- For prediction: Use `predict.py` (uses the same cluster mapping as training).
 - Check results in `metrics.csv` and plots.
